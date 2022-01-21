@@ -1,0 +1,471 @@
+@font-face {
+    font-family: monaco;
+    src: url(../Font/monaco.ttf);
+}
+
+:root{
+    font-size: 16px;
+    font-family: monaco;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    background-image: url(../imgs/Background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::-webkit-scrollbar{
+    width: .5rem;
+}
+
+body::-webkit-scrollbar-track{
+    background-color:rgb(46, 43, 43) ;
+}
+
+.navbar{
+    position: fixed;
+    height: 100vh;
+    width: 5rem;
+    background-color: rgb(54, 54, 54);
+    transition: width 300ms ease;
+    border: rgb(138, 138, 138) solid 1px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:first-child{
+    margin-top: 0;
+    margin-bottom: 8rem;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: black;
+    text-decoration: none;
+    transition: 300ms ease;
+}
+
+.profile_PictureNav{
+    width: 3.7rem;
+    border-radius: 50%;
+    margin-left: .2rem;
+    border: rgb(138, 138, 138) solid 1px;
+    background-color: rgb(42, 43, 42);
+    padding: 5px;
+}
+
+.nav-link:hover{
+    color: #2691d9;
+    background-color: rgba(82, 79, 79, 0.815);
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+    font-size: 2rem;
+    white-space: wrap;
+    font-weight: bold;
+}
+
+.nav-link svg{
+    min-width: 2rem;
+    max-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover{
+    width: 16rem;
+}
+
+.navbar:hover .link-text{
+    display: block;
+    white-space: wrap;
+}
+
+.mainContainer{
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40%;
+    min-height: fit-content;
+    padding: 1%;
+    border-radius: 10px;
+    border: rgb(138, 138, 138) solid 1px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(54, 54, 54, 0.900);
+}
+
+.createPost_container{
+    background-color: rgb(42, 43, 42);
+    border-radius: 10px;
+    border: rgb(138, 138, 138) solid 1px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.createPost_container h1{
+    font-size: 5rem;
+    /* margin-left: 50%;
+    margin-top: 5px;
+    transform: translate(-50%); */
+    color: white;
+    font-weight: 100;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.pageTitle{
+    width: 100%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.createPost_container #star{
+    color: yellow;
+    margin-top: 2.5rem;
+    /* margin-left: 2rem; */
+}
+
+.createPost_container .about{
+    font-size: 5rem;
+    margin-left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-weight: 100;
+}
+
+.createP_icon{
+    flex: .5;
+    text-align: center;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.createPost{
+    width: 100%;
+    height: 100%;
+    margin-top: 3.5%;
+}
+
+.createPost textarea{
+    background-color: rgba(54, 54, 54, 0.900);
+    width: 95%;
+    height: 60%;
+    font-family: monaco;
+    line-height: 1.2em;
+    font-size: 30px;
+    resize: none;
+    color: white;
+}
+
+.postBtn{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+}
+
+.postBtn input{
+    margin-top: 10px;
+    width: 5rem;
+    height:30px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: monaco;
+    color: #e9f4fb;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    margin-right: 1rem;
+}
+    
+.postBtn input:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.uploadFileLabel{
+    color: white;
+    margin-left: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.uploadFileLabel:hover{
+    color: #2691d9;
+}
+
+.previewFile{
+    margin-left: 1rem;
+    width: 2rem;
+}
+
+#uploadFile{
+    display: none;
+}
+
+.postFeed_container{
+    background-color: rgb(42, 43, 42);
+    border-radius: 10px;
+    border: rgb(138, 138, 138) solid 1px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 1rem;
+}
+
+.postFeed_icon{
+    flex: .5;
+    text-align: center;
+    align-self: flex-start;
+    margin-top: 1rem;
+    width: 4rem;
+}
+
+.usernamePost{
+    color: white;
+    font-size: 1.5rem;
+    width: 5rem;
+    justify-self: center;
+    border-top: solid 2px rgb(138, 138, 138);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    margin-left: 1.3rem;
+}
+
+.postFeed{
+    flex: 2.5;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    padding: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.actualPost{
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.fileUpload{
+    border: rgb(138, 138, 138) solid 1px;
+    background-color: rgba(54, 54, 54, 0.900);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.postOptions_Container{
+    height: 100%;
+    margin-right: 1rem;
+    color: #2691d9;
+}
+
+.likeBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    margin-right: 2%;
+    height: 2rem;
+}
+
+.likes{
+    margin-top: .8rem;
+    font-size: 2rem;
+}
+
+.likeLabel{
+    color: white;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.likeLabel:hover{
+    color: #2691d9;
+    background-color: rgb(105, 105, 105);
+    border-radius: 50%;
+}
+
+.dislikeBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    margin-right: 2%;
+    height: 2rem;
+}
+
+.dislikes{
+    margin-top: .8rem;
+    font-size: 2rem;
+}
+
+.dislikeLabel{
+    color: white;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.dislikeLabel:hover{
+    color: #2691d9;
+    background-color: rgb(105, 105, 105);
+    border-radius: 50%;
+}
+
+.commentBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    margin-right: 2%;
+    height: 2rem;
+}
+
+.comments{
+    margin-top: .7rem;
+    font-size: 2rem;
+}
+
+.commentLabel{
+    margin-top: .5rem;
+    font-size: 1.2rem;
+    padding: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.commentLabel:hover{
+    color: #2691d9;
+    background-color: rgb(105, 105, 105);
+    border-radius: 50%;
+}
+
+.edit_deleteOption{
+    height: 1.8rem;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.edit_deleteOption a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.edit_deleteOption a:hover{
+    color: #2691d9;
+}
+
+.dropbtn {
+    background-color: rgb(138, 138, 138);
+    color: white;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: monaco;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 150%;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+      background-color: #949494;
+    }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #2691d9;
+  }
+
+  .tag{
+      position: relative;
+      float: right;
+      font-size: 130%;
+      background-color: #949494;
+      border-radius: 50px;
+      width: fit-content;
+      padding: 10px 5px;
+      left: 55%;
+      margin: 0;
+  }
+  
+  .postTag{
+    border-radius: 50px;
+    background-color: #949494;
+    font-size: 140%;
+    color: black;
+    padding: 10px 5px;
+  }
